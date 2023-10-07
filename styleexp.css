@@ -1,0 +1,127 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+#nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#nav img {
+    max-width: 100px;
+    height: auto;
+}
+
+#header {
+    margin-left: auto;
+}
+
+#header h2 {
+    margin-right: 20px;
+}
+
+/* Style the main content */
+#main {
+    padding: 20px;
+}
+
+/* Style the video element */
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style page sections */
+#page1, #page2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#page1 h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#page1 h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 1rem;
+    color: #777;
+}
+
+#divider {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#divider h1 {
+    font-size: 1.5rem;
+}
+
+/* Style the cards */
+#container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card i {
+    font-size: 2rem;
+    color: #333;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover #overlay {
+    opacity: 1;
+}
+
+#overlay h1 {
+    color: #fff;
+    font-size: 1rem;
+}
