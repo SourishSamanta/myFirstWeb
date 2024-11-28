@@ -4,7 +4,10 @@
     margin: 0;
     color: white;
     font-family: 'montserrat';
+    box-sizing: border-box
 }
+
+
 
 #nav{
     height: 80px;
@@ -12,25 +15,34 @@
     background-color: rgb(220, 0, 120);
     align-items: center;
     display: flex;
+    justify-content: space-between;
     position: fixed;
     z-index: 98;
+    padding: 0 20px;
     
     
 }
 #nav>img{
     height: 30px;
-    margin-left: 10px;
+    
     z-index: 2;
 }
 
 #header{
     width: 500px;
-    margin-left: 23%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 2;
     font-size: 10px;
+}
+#guest{
+    padding: 10px;
+    display: flex;
+    align-items:center ;
+    justify-content: space-around;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 #blurDiv{
     width:100%;
@@ -120,7 +132,7 @@
     background: linear-gradient(to left bottom ,rgb(255, 0, 140),rgb(74, 0, 41));
     align-items: center;
     display: flex;
-    
+    justify-content: center;
     
     
     
@@ -129,7 +141,7 @@
 #divider h1{
     text-transform: uppercase;
     text-align: center;
-    margin-left: 26%;
+    
     -webkit-text-stroke: 1px white;
     color: transparent;
 
@@ -139,7 +151,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
     padding: 0% 14%;
     
     
@@ -157,6 +169,7 @@
     display: flex;
     align-items: center;
     z-index: 5;
+    overflow: hidden;
     
     
 }
@@ -174,22 +187,17 @@
 }
 
 #overlay{
-    height: 100% ;
+    height: 100%;
     width: 100%;
-    border: 8px solid rgb(255, 0, 140);
     display: flex;
     align-items: center;
     left: 0;
-    
-    
     background-color: rgb(220, 0, 120);
     color: white;
-    position: absolute;
-    border-radius: 40px;
     justify-content: center;
     opacity: 0;
     transition: all ease 0.5s;
-    
+    z-index: 6;
 }
 
 .card:hover #overlay{
@@ -217,7 +225,6 @@
     position: relative;
 }
 #itext{
-    
     position: absolute;
     top: 18%;
     width: 60%;
@@ -243,18 +250,14 @@
     color: rgb(220, 0, 120);
 }
 
-
-
 .mySlides {
     display: none;
 }
-
 
 .mySlides:first-child {
     display: block;
     z-index: 20;
 }
-
 
 #simg{
     width: 80%;
@@ -318,6 +321,7 @@
     font-size: 40px;
     font-weight: 900;
     z-index: 50;
+    transition: all .4s ease-in-out;
 }
 #signup:hover{
     background-color: aliceblue;
@@ -378,26 +382,77 @@
 #nav i{
     scale: 140%;
 }
-#guest{
-    height: 40px;
-    width: 120px;
-    display: flex;
-    align-items:center ;
-    right: 30px;
-    position: absolute;
-    border: 1px solid white;
-    border-radius: 20px;
-    justify-content: space-around;
-    scale:75%;
-}
+
 
 ::-webkit-scrollbar{
     background: black;
     width: 8px;
+    opacity: 50%;
    
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(220, 0, 120);
-    border-radius: 40%;
+    background-color: rgb(156, 0, 86);
+    border-radius: 100px;
     height: 10px;
+}
+
+
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        margin-left: 0;
+        font-size: 12px;
+        gap: 10px;
+    }
+    #nav {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+    }
+    #guest {
+        position: static;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page1 h1 {
+        font-size: 80px;
+    }
+    #page1 h3 {
+        font-size: 24px;
+    }
+    #page1 p {
+        width: 90%;
+        font-size: 14px;
+    }
+    #signup {
+        font-size: 20px;
+        width: 200px;
+        height: 60px;
+    }
+}
+
+
+#header h2 a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+#header h2 a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+#header h2 a:hover::after {
+    width: 100%;
 }
